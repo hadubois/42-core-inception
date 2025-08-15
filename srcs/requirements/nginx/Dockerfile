@@ -13,6 +13,5 @@ RUN openssl req -x509 -nodes \
 COPY ./conf/default /etc/nginx/sites-available/default
 
 RUN chmod 755 /var/www/html
-#RUN chown www-data:www-data /var/www/html
 
 ENTRYPOINT ["nginx", "-g", "daemon off;"]

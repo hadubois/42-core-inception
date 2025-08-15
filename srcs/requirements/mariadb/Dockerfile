@@ -7,7 +7,7 @@ RUN	apt-get update \
 
 COPY ./conf/50-server.cnf /etc/mysql/mariadb.conf.d/
 
-COPY conf/init.sh /tmp/init.sh
+COPY ./tools/init.sh /tmp/init.sh
 RUN	chmod +x /tmp/init.sh
 
 ENTRYPOINT ["sh", "./tmp/init.sh"]

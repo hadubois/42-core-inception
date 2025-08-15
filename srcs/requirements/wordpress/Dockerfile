@@ -7,7 +7,7 @@ RUN apt-get update && \
 
 RUN sed -i 's|^listen = .*|listen = 9000|' /etc/php/7.4/fpm/pool.d/www.conf
 
-COPY ./conf/init.sh /
+COPY ./tools/init.sh /
 RUN chmod +x /init.sh
 
 ENTRYPOINT [ "sh", "./init.sh" ]
